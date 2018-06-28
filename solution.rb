@@ -6,10 +6,10 @@ get '/' do
   unless params[:nombre]
      "Hola desconocido!"
   else
-     "Hola #{params[:nombre]}"
+     "Hola #{params[:nombre]}!"
   end
 end
 
 get '/:nombre' do
-  "Hola #{params[:nombre]}!"
+  "Hola #{params[:nombre]}"
 end
