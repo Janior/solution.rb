@@ -11,5 +11,5 @@ get '/' do
 end
 
 get '/:nombre' do
-  "Hola #{params[:nombre]}"
+  "Hola #{params[:nombre]}!"
 end
