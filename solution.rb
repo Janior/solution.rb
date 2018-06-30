@@ -3,10 +3,11 @@
 require "sinatra"
 
 get '/' do
-  unless params[:nombre]
-     "Hola desconocido!"
+  if params[:nombre] && params[:nombre] !=""
+    "Hola #{params[:nombre]}!"  
   else
-    "Hola #{params[:nombre]}!" 
+    
+    "Hola desconocido!"
   end
 end
 
