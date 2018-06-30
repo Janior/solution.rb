@@ -1,16 +1,10 @@
 #https://github.com/Janior/solution.rb
 
-require "sinatra"
-
+require 'sinatra'
 get '/' do
-  if params[:nombre] && params[:nombre] !=""
-    "Hola #{params[:nombre]}!"  
-  else
-    
-    "Hola desconocido!"
-  end
-end
-
-get '/:nombre' do
-  "Hola #{params[:nombre]}"
+   unless params[:nombre] != nil && params[:nombre].capitalize == "Juan"
+          "Hola desconocido!"
+   else
+          "<h1>Hola #{params[:nombre]}</h1>"
+   end
 end
