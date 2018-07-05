@@ -1,4 +1,5 @@
 #https://github.com/Janior/solution.rb
+
 require "sinatra"
 
 get '/' do
