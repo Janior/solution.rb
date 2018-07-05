@@ -1,6 +1,5 @@
-<h1>Hola</h1>
-<ul>
-	<% @even.each do |e| %>
-		<li><%="#{e}" %></li>
-	<% end %>
-</ul>
+<h1>Mi cuenta es: <%=@contar %></h1>
+<form method="post" action="/">
+	<input type="hidden" name="MiCuenta" value="<%=@contar %>">
+	<input type="submit" name="Sumar!">
+</form>
