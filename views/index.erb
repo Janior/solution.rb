@@ -1,5 +1,6 @@
-<h1>Mi cuenta es: <%=@contar %></h1>
-<form method="post" action="/">
-	<input type="hidden" name="MiCuenta" value="<%=@contar %>">
-	<input type="submit" name="Sumar!">
+<h1>Abuela Sorda</h1>
+<form action="/diceabuelita" method="post">
+	<label>Di algo abuela:</label>
+	<input type="text" name="txtMensaje" id="txtMensaje">
+	<input type="submit" value="Dilo!">
 </form>
