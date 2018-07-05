@@ -1,16 +1,12 @@
 #https://github.com/Janior/solution.rb
 require "sinatra"
 
-get '/' do 
-	@even = []
-	for i in 1..50
-		str = ""
-		if i.even?
-			str = "Par"
-		else
-			str = "Impar"
-		end
-		@even << "#{i} Soy #{str}!"
-	end
+get '/' do
+	@contar =0
+	erb :index
+end
+
+post '/' do
+	@contar= (params[:MiCuenta]).to_i + 1
 	erb :index
 end
