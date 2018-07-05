@@ -1,7 +1,8 @@
 #https://github.com/Janior/solution.rb
 
 require "sinatra"
-
+<meta charset="UTF-8">
+	
 get '/' do
 	erb :index
 end
