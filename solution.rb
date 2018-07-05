@@ -2,11 +2,20 @@
 require "sinatra"
 
 get '/' do
-	@contar =0
 	erb :index
 end
 
-post '/' do
-	@contar= (params[:MiCuenta]).to_i + 1
-	erb :index
+
+post '/diceabuelita' do
+	@elmensaje= params[:txtMensaje]
+	if !@elmensaje.empty? 
+		if @elmensaje == @elmensaje.upcase
+			@elmensaje = "Ahhh si, manzanas!"
+		else
+			@elmensaje = "Habla más duro mijito"
+		end
+		erb :diceabuelita
+	else
+		erb :index
+	end
 end
