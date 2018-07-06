@@ -3,19 +3,6 @@
 require "sinatra"
 
 get '/' do
+	@browser = request.user_agent
 	erb :index
-end
-
-post '/diceabuelita' do
-	@elmensaje= params[:txtMensaje]
-	if !@elmensaje.empty? 
-		if @elmensaje == @elmensaje.upcase
-			@elmensaje = "Ahhh si, manzanas"
-		else
-			@elmensaje = "Habla mas duro mijito"
-		end
-		erb :diceabuelita
-	else
-		erb :index
-	end
 end
